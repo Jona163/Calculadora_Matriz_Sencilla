@@ -37,3 +37,18 @@ def dato():
     else:
         matr=OK(input("Introduce número: "))
     return matr
+
+#FUNCIÓN PARA DEFINIR MATRIZ
+def crea_matriz(fil,col):
+    f=-1;c=-1
+    e_fil=[]
+    for f in range(fil):
+        e_col=[]
+        f+=1
+        for c in range(col):
+            c+=1
+            valor=OK(input('Introduzca el componente (%d,%d): '%(f,c)))
+            e_col.append(valor)
+        e_fil.append(e_col)
+        matri=np.array(e_fil,float)
+    return matri
