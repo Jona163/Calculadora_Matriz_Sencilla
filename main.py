@@ -52,3 +52,28 @@ def crea_matriz(fil,col):
         e_fil.append(e_col)
         matri=np.array(e_fil,float)
     return matri
+    
+while True:
+    print("          CALCULADORA DE MATRICES          ") 
+    print("""************TABLA DE OPERADORES************
+*******************************************
+SUMA                           OPERADOR "+"
+RESTA                          OPERADOR "-"
+MULTIPLICACION                 OPERADOR "*"
+FINALIZAR CALCULO              OPERADOR "C"
+DATO MATRIZ                    OPERANDO "M"
+DATO NÚMERO                    OPERANDO "N"
+*******************************************
+*******************************************""")
+    
+    fil=OKI(input("Indique número de filas: "))
+    col=OKI(input("Indique número de columnas: "))
+    e=fil
+    f=-1;c=-1
+    acum=crea_matriz(fil,col)
+    print("\n")
+    print(acum,"\n")
+    while True:
+        oper=input("Introduzca operador: ")
+        while oper!="+" and oper!="-" and oper!="*" and oper!="C":
+            oper=input("Introduzca un operador válido: ")
