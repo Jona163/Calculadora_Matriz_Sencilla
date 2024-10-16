@@ -28,3 +28,12 @@ def val(tp):
     while tp!="N" and tp!="M":
         tp=input("Introduzca \'N\' para dato numérico y \'M\' para matriz: ")
     return tp
+
+#FUNCIÓN DE TIPO DE DATO
+def dato():
+    tipo_dato=val(input("Tipo de dato: "))
+    if tipo_dato=="M":
+        matr=crea_matriz(fil,col)
+    else:
+        matr=OK(input("Introduce número: "))
+    return matr
