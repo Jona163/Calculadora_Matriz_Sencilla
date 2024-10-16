@@ -77,3 +77,33 @@ DATO NÚMERO                    OPERANDO "N"
         oper=input("Introduzca operador: ")
         while oper!="+" and oper!="-" and oper!="*" and oper!="C":
             oper=input("Introduzca un operador válido: ")
+       if oper=="+":
+            matr=dato()
+            acum=acum+matr
+        elif oper=="-":
+            matr=dato()
+            acum=acum-matr
+        elif oper=="*":
+            tipo_dato=val(input("Tipo de dato: "))
+            if tipo_dato=="M":
+                fil=col
+                col=OKI(input("Introduce número de columnas: "))
+                matr=crea_matriz(fil,col)
+                acum=np.dot(acum,matr)
+                fil=e
+            else:
+                matr=OK(input("Introduce número: "))
+                acum=acum*matr
+                
+        if oper!="C":
+            print("\nRESULTADO")
+            print(acum,"\n")
+
+        else:
+            break
+        
+    conti=ns(input("¿Reiniciar cálculos?: "))
+    if conti=="n":
+        break
+    matr=0
+    subprocess.call(["cmd.exe","/C","cls"])
