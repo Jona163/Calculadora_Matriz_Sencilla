@@ -18,3 +18,13 @@ def OK(n):
     except:
         n=OK(input("Caracter no valido: "))
     return n
+
+def ns(c):
+    while c!=("s") and c!=("n"):
+        print(chr(7));c=input("Escribe solo \'n\' o \'s\' según su opción: ")
+    return(c)
+
+def val(tp):
+    while tp!="N" and tp!="M":
+        tp=input("Introduzca \'N\' para dato numérico y \'M\' para matriz: ")
+    return tp
